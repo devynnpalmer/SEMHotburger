@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 log = (arg) => {
-    console.log(`Loggin results for ${arg}`)
+    console.log(`Log in results for ${arg}`)
 }
 app.get('/version', (req, res) => {
  log('/version');
