@@ -1,15 +1,19 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80
 
-log = (arg) => {
-    console.log(`Log in results for ${arg}`)
-}
+
 app.get('/version', (req, res) => {
  log('/version');
- res.send('This is version 0 of the HotBurger service')
+ res.send('Version 0 of the HotBurger service')
 }
 );
+
+log = (arg) => {
+    console.log(`Log in for ${arg}`)
+}
+
+app.listen(port, () => console.log(`Connection has been made`));
 
 app.get('/logs', (req, res) => {
     log('/logs');
@@ -17,4 +21,3 @@ app.get('/logs', (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`A new connection has been made`));
